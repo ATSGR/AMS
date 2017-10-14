@@ -1,0 +1,229 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="AMS.VMS.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script src="Resourcs/bootstrap/js/bootstrap.js"></script>
+    <script src="Resourcs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="Resourcs/bootstrap/js/jquery-1.11.0.min.js"></script>
+    <script src="Resourcs/bootstrap/js/npm.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="Resourcs/bootstrap/js/jquery-ui.min.js"></script>
+    <script src="Resourcs/bootstrap/js/jquery-ui.js"></script>
+
+    <!--jquery css file for date picker dnt remove-->
+  <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css"/>
+  <link rel="stylesheet" type="text/css" href="/resources/demos/style.css"/>
+
+ <style>
+#menu {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0 0 0;
+    list-style: none;  
+    background-color: #111;
+    background-image: linear-gradient(#444, #111);
+    box-shadow: 0 2px 1px #9c9c9c;
+}
+
+#menu li {
+    float: left;
+    padding: 0 0 10px 0;
+    position: relative;
+}
+
+#menu a {
+    float: left;
+    height: 25px;
+    padding: 0 25px;
+    color: #999;
+    text-transform: uppercase;
+    font: bold 12px/25px Arial, Helvetica;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #000;
+}
+
+#menu li:hover > a {
+    color: #fafafa;
+}
+
+*html #menu li a:hover { /* IE6 */
+    color: #fafafa;
+}
+
+#menu li:hover > ul {
+    display: block;
+}
+
+/* Sub-menu */
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;    
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    z-index: 99999;     
+    background-image: linear-gradient(#444, #111);    
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#menu ul li {
+    float: none;
+    margin: 0;
+    padding: 0;
+    display: block;  
+    box-shadow: 0 1px 0 #111111, 
+                0 2px 0 #777777;
+}
+
+#menu ul li:last-child { 
+    box-shadow: none;    
+}
+
+#menu ul a {    
+    padding: 10px;
+    height: auto;
+    line-height: 1;
+    display: block;
+    white-space: nowrap;
+    float: none;
+    text-transform: none;
+}
+
+*html #menu ul a { /* IE6 */   
+    height: 10px;
+    width: 150px;
+}
+
+*:first-child+html #menu ul a { /* IE7 */    
+    height: 10px;
+    width: 150px;
+}
+
+#menu ul a:hover {
+    background-color: #6E7B79;
+
+}
+
+#menu ul li:first-child a {
+    border-radius: 5px 5px 0 0;
+}
+
+#menu ul li:first-child a:after {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: -8px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 8px solid #444;
+}
+
+#menu ul li:first-child a:hover:after {
+    border-bottom-color: #04acec; 
+}
+
+#menu ul li:last-child a {
+    border-radius: 0 0 5px 5px;
+}
+
+/* Clear floated elements */
+#menu:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+* html #menu{ zoom: 1; } /* IE6 */
+*:first-child+html #menu { zoom: 1; } /* IE7 */
+
+#menu ul li:first-child a:after {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: -8px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 8px solid #444;
+}
+
+#menu ul li:first-child a:hover:after {
+    border-bottom-color: #04acec; 
+}
+
+* html #menu             { zoom: 1; } /* IE6 */
+*:first-child+html #menu { zoom: 1; } /* IE7 */
+
+  </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body  style="margin:0;">
+      <ul id="menu">
+    <li><a runat="server" href="Pages/deafults.aspx">Home</a></li>
+    <li>
+        <a runat="server" href="Pages/deafults.aspx">SetUp</a>
+        <ul>
+            <li><a runat="server" href="Pages/vendorInfo.aspx">Vendor Information</a></li>
+            <li><a runat="server" href="Pages/DriverInfo.aspx"> Driver Information </a></li>
+            <li><a runat="server" href="Pages/VehiclesTag.aspx">Driver Tag With Vehicle</a></li>
+            <li><a runat="server" href="Pages/spareparts.aspx">Spareparts Category</a></li>
+             <li><a runat="server" href="Pages/VehiclesInfo.aspx">Vehicles Information </a></li>
+        </ul>
+    </li>
+ 
+  <%--  <li><a runat="server" href="Pages/deafults.aspx">SpareParts Information</a>
+        <ul>
+            <li><a runat="server" href="Pages/spareparts.aspx">Spareparts Information </a></li>
+            <li><a runat="server" href="Pages/SparePartsReceived.aspx">Purchase Spareparts </a></li>
+        </ul>
+    </li>--%>
+ <%--   <li><a runat="server" href="Pages/deafults.aspx">Vehicle Information</a>
+    <ul>
+            <li><a runat="server" href="Pages/VehiclesInfo.aspx">New Vehicles Information </a></li>
+    </ul>
+    </li>--%>
+          
+     <li><a runat="server" href="Pages/deafults.aspx">Transaction</a>
+      <ul>
+          <li><a runat="server" href="Pages/SparePartsReceived.aspx">Purchase</a></li>
+            <li><a runat="server" href="Pages/VehicleLogEntry.aspx">Log Book Information </a></li>
+    
+             <li><a runat="server" href="Pages/OtherExpanse.aspx">Other Expense </a></li>
+         </ul>
+    </li>
+          <%--<li><a runat="server" href="Pages/VehicleScheduleManualReport.aspx">Vehicle Schedule</a></li>--%>
+        <li><a runat="server" href="Pages/Report.aspx">Report</a></li>
+
+
+   <li>
+        <a runat="server" href="Pages/deafults.aspx">Incident</a>
+        <ul>
+            <li><a runat="server" href="Pages/duringIncident.aspx">During Incident</a></li>
+            <li><a runat="server" href="Pages/afterIncident.aspx">After Incident</a></li>
+        </ul>
+    </li>
+
+
+</ul>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+   <%-- <div style="margin-top:500px; padding: 0.5em; color:white; background-color:#333; clear:both; text-align:center">
+        <p> This software is powered and developed by HDC MIS </p>
+    </div>--%>
+
+</body>
+</html>
