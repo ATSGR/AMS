@@ -91,5 +91,9 @@ namespace AMS.VMS.BO
             textboxInsuranceCode.Text = maxInsCode;
         }
 
+
+        //method added...
+
+
     }
 }
