@@ -347,3 +347,7 @@ C:\Users\MIS7\Downloads\AMS-master\AMS\AMS\bin\Newtonsoft.Json.xml
 C:\Users\MIS7\Downloads\AMS-master\AMS\AMS\obj\Debug\AMS.csprojResolveAssemblyReference.cache
 C:\Users\MIS7\Downloads\AMS-master\AMS\AMS\obj\Debug\AMS.dll
 C:\Users\MIS7\Downloads\AMS-master\AMS\AMS\obj\Debug\AMS.pdb
+D:\VMS Projects\AMS\AMS\bin\AjaxControlToolkit.dll
+D:\VMS Projects\AMS\AMS\bin\Microsoft.QualityTools.Testing.Fakes.dll
+D:\VMS Projects\AMS\AMS\bin\Newtonsoft.Json.dll
+D:\VMS Projects\AMS\AMS\bin\Newtonsoft.Json.xml

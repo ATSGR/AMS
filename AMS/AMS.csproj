@@ -1400,6 +1400,8 @@
     <None Include="VMS\Resourcs\Scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="VMS\Pages\Fitness.aspx" />
     <Content Include="VMS\Pages\InsBranch.aspx" />
+    <Content Include="VMS\Pages\TaxToken.aspx" />
+    <Content Include="VMS\Pages\VehicleSchedule.aspx" />
     <Content Include="VMS\Resourcs\Scripts\jquery-3.2.1.js" />
     <Content Include="VMS\Resourcs\Scripts\jquery-3.2.1.min.js" />
     <Content Include="VMS\Resourcs\Scripts\jquery-3.2.1.slim.js" />
@@ -1588,6 +1590,20 @@
     </Compile>
     <Compile Include="VMS\Pages\InsuranceCompany.aspx.designer.cs">
       <DependentUpon>InsuranceCompany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VMS\Pages\TaxToken.aspx.cs">
+      <DependentUpon>TaxToken.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VMS\Pages\TaxToken.aspx.designer.cs">
+      <DependentUpon>TaxToken.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VMS\Pages\VehicleSchedule.aspx.cs">
+      <DependentUpon>VehicleSchedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VMS\Pages\VehicleSchedule.aspx.designer.cs">
+      <DependentUpon>VehicleSchedule.aspx</DependentUpon>
     </Compile>
     <Compile Include="VMS\Pages\VehiclesTag.aspx.cs">
       <DependentUpon>VehiclesTag.aspx</DependentUpon>
