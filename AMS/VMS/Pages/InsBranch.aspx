@@ -70,7 +70,7 @@
                 <div class="col-md-3">
                     <label class="col-md-2 control-label" for="add"></label>
 
-                 <%--   <asp:GridView ID="grdBranchInfo" runat="server" PageSize="5" Width="1000px" AllowPaging="True" CssClass="table table-hover table-bordered table-responsive"
+                 <asp:GridView ID="grdBranchInfo" runat="server" PageSize="5" Width="1072px" AllowPaging="True" CssClass="table table-hover table-bordered table-responsive"
                      AutoGenerateColumns="False" OnPageIndexChanging="grdBranchInfo_PageIndexChanging" OnSelectedIndexChanged="grdBranchInfo_SelectedIndexChanged">
                         <Columns>
                             <asp:BoundField HeaderText="Company Name" DataField="Companyname"></asp:BoundField>
@@ -82,16 +82,16 @@
                           
                             <asp:TemplateField HeaderText="View">
                                 <ItemTemplate>
-                                    <asp:LinkButton runat="server" Text="View" ID="btnlink" OnClick="btnlink"></asp:LinkButton>
+                                 <asp:LinkButton runat="server" Text="View" ID="btnlink" OnClick="btnlink"></asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>
                         <PagerStyle  ForeColor="#333333" HorizontalAlign="Center" />
 
-                        <%--<HeaderStyle BackColor="#669933" Font-Bold="True" ForeColor="White" />--%>
+                       <HeaderStyle BackColor="#669933" Font-Bold="True" ForeColor="White" />
 
-                       <%-- <HeaderStyle BackColor="#337ab7" ForeColor="White" />
-                    </asp:GridView>--%>
+                      <HeaderStyle BackColor="#337ab7" ForeColor="White" />
+                    </asp:GridView>
 
                 </div>
 

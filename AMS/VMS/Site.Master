@@ -183,6 +183,7 @@
             <li><a runat="server" href="Pages/spareparts.aspx">Spareparts Category</a></li>
              <li><a runat="server" href="Pages/VehiclesInfo.aspx">Vehicles Information </a></li>
             <li><a runat="server" href="Pages/InsuranceCompany.aspx">Insurance Company Setup  </a></li>
+            <li><a runat="server" href="Pages/InsBranch.aspx">Insurance Company Branchs Setup  </a></li>
         </ul>
     </li>
  

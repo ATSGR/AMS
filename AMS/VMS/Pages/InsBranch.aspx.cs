@@ -27,7 +27,11 @@ namespace AMS.VMS.Pages
             {
                 if (!IsPostBack)
                 {
+                    option = 1;
+                    BindInsuranceCompanyBranchTogrid();
                     GetInsurenceCompany();
+                    btnSave.Visible = true;
+                    btnUpdate.Visible = false;
                    
                 }
 
@@ -76,6 +80,7 @@ namespace AMS.VMS.Pages
             option = 1;
             AccessInsuranceBranch();
             Refresh();
+            BindInsuranceCompanyBranchTogrid();
             //btnSave.Enabled = false;
             string message = "Data have been saved successfully.";
             string script = "window.onload = function(){ alert('";
@@ -96,6 +101,66 @@ namespace AMS.VMS.Pages
             string createdBy = "MIS";
             objdalInsuranceBranchInfo.InsertInsuranceBranch(option, companyName, branch, code, phone, email, address, createdBy);
         }
+
+
+
+
+        #region for Gridview for insurance company....
+
+        protected void grdBranchInfo_PageIndexChanged(object source, DataGridPageChangedEventArgs e)
+        {
+            BindInsuranceCompanyBranchTogrid();
+
+        }
+
+
+        protected void grdBranchInfo_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            grdBranchInfo.PageIndex = e.NewPageIndex;
+            BindInsuranceCompanyBranchTogrid();
+
+        }
+
+        protected void grdBranchInfo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            GridViewRow selectedRow = grdBranchInfo.SelectedRow;
+            txtCode.Text = selectedRow.Cells[0].Text;
+            ddlCompanyName.Text = selectedRow.Cells[1].Text;
+            txtBranch.Text = selectedRow.Cells[2].Text;
+            txtPhone.Text = selectedRow.Cells[3].Text;
+            txtEmail.Text = selectedRow.Cells[4].Text;
+            txtAddress.Text = selectedRow.Cells[5].Text;
+        }
+
+        private void BindInsuranceCompanyBranchTogrid()
+        {
+            grdBranchInfo.DataSource = objdalInsuranceBranchInfo.GetAllInsuraceCompanyBranch(option, "");
+            grdBranchInfo.DataBind();
+            
+        }
+
+
+        protected void btnlink(object sender, EventArgs e)
+        {
+            int i = 0;
+            GridViewRow grdrow = (GridViewRow)(sender as Control).Parent.Parent;
+           int rowIndex = grdrow.RowIndex;
+           ddlCompanyName.Text = grdBranchInfo.Rows[rowIndex].Cells[0].Text;
+           txtBranch.Text = grdBranchInfo.Rows[rowIndex].Cells[1].Text;
+           txtCode.Text = grdBranchInfo.Rows[rowIndex].Cells[2].Text;
+           txtPhone.Text = grdBranchInfo.Rows[rowIndex].Cells[3].Text;
+           txtEmail.Text = grdBranchInfo.Rows[rowIndex].Cells[4].Text;
+           txtAddress.Text = grdBranchInfo.Rows[rowIndex].Cells[5].Text;
+           btnSave.Visible = false;
+           btnUpdate.Visible = true;
+
+
+        }
+        #endregion
+
+
+
 
 
 

@@ -571,6 +571,42 @@ namespace AMS.VMS.Pages {
         protected global::System.Web.UI.WebControls.GridView grdVehicleRegistration;
         
         /// <summary>
+        /// lblCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCode;
+        
+        /// <summary>
+        /// txtCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCode;
+        
+        /// <summary>
+        /// lblCompany control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCompany;
+        
+        /// <summary>
+        /// ddlRegNO control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlRegNO;
+        
+        /// <summary>
         /// lblCompanyName control.
         /// </summary>
         /// <remarks>
@@ -580,67 +616,67 @@ namespace AMS.VMS.Pages {
         protected global::System.Web.UI.WebControls.Label lblCompanyName;
         
         /// <summary>
-        /// txtCompanyName control.
+        /// ddlCompanyName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCompanyName;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCompanyName;
         
         /// <summary>
-        /// lblCompanyNumber control.
+        /// lblBranchName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCompanyNumber;
+        protected global::System.Web.UI.WebControls.Label lblBranchName;
         
         /// <summary>
-        /// txtCompanyNumber control.
+        /// ddlBranchName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCompanyNumber;
+        protected global::System.Web.UI.WebControls.DropDownList ddlBranchName;
         
         /// <summary>
-        /// lblVehicleReg control.
+        /// lblPloicyNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblVehicleReg;
+        protected global::System.Web.UI.WebControls.Label lblPloicyNumber;
         
         /// <summary>
-        /// ddlVehicleRegNo control.
+        /// txtPolicyNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlVehicleRegNo;
+        protected global::System.Web.UI.WebControls.TextBox txtPolicyNumber;
         
         /// <summary>
-        /// lblPolicyNumber control.
+        /// lblMrNO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPolicyNumber;
+        protected global::System.Web.UI.WebControls.Label lblMrNO;
         
         /// <summary>
-        /// txtPlicyNumber control.
+        /// txtmrNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPlicyNumber;
+        protected global::System.Web.UI.WebControls.TextBox txtmrNo;
         
         /// <summary>
         /// lblEffectiveDate control.
@@ -661,40 +697,58 @@ namespace AMS.VMS.Pages {
         protected global::System.Web.UI.WebControls.TextBox txtEffectiveDate;
         
         /// <summary>
-        /// lblExpireDate control.
+        /// lblExpDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblExpireDate;
+        protected global::System.Web.UI.WebControls.Label lblExpDate;
         
         /// <summary>
-        /// txtExpireDate control.
+        /// txtExpDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtExpireDate;
+        protected global::System.Web.UI.WebControls.TextBox txtExpDate;
         
         /// <summary>
-        /// lblInsuranceType control.
+        /// lblGrapicalarea control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblInsuranceType;
+        protected global::System.Web.UI.WebControls.Label lblGrapicalarea;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// txtGraphicalarea control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.TextBox txtGraphicalarea;
+        
+        /// <summary>
+        /// lblIssueDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblIssueDate;
+        
+        /// <summary>
+        /// txtIssueDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtIssueDate;
         
         /// <summary>
         /// lblNote control.
@@ -715,12 +769,21 @@ namespace AMS.VMS.Pages {
         protected global::System.Web.UI.WebControls.TextBox txtNote;
         
         /// <summary>
-        /// btnSaveInsurence control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSaveInsurence;
+        protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// btnUpdate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnUpdate;
     }
 }

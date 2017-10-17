@@ -30,8 +30,8 @@ namespace AMS.VMS.Pages
                     BindMax();
                     BindVehicleChassisNo();
                     BinddEPARTMENT();
-                    BindVehicleRegistration();
-                    ddlVehicleRegNo.Items.Add(new ListItem("Select", "0", true));
+                  
+                    
                    
                     //DropDownList1.Items.Add(new ListItem("Select", "0", true))
                     
@@ -104,18 +104,7 @@ namespace AMS.VMS.Pages
         // bind vehicle registraion number in insurance form
 
 
-        private void BindVehicleRegistration()
-        {
-            
-            dt = objdalVehicleInformation.GetVehicleRegistrationNumber();          
-            ddlVehicleRegNo.DataSource = dt;          
-            ddlVehicleRegNo.DataTextField = "RegNo";
-            ddlVehicleRegNo.DataValueField = "regNo";
-            ddlVehicleRegNo.DataBind();
-
-           
-
-        }
+       
 
 
         private void BinddEPARTMENT()

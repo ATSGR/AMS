@@ -40,8 +40,15 @@ namespace AMS.VMS.Pages
 
 
 
+        //getall or get by id data retrive metohd
 
+        public DataTable GetAllInsuraceCompanyBranch(int option, string code)
+        {
 
+            string query = "[SP_Get_InsuranceCompany_BranchInfo]' " + option + "', '" + code + "'";
+            dt = DataExecute.GetDataSet(query).Tables[0];
+            return dt;
+        }
 
 
     }

@@ -311,18 +311,6 @@ D:\Office project\AMS_17.05.2017\AMS\bin\Newtonsoft.Json.dll
 D:\Office project\AMS_17.05.2017\AMS\bin\Newtonsoft.Json.xml
 D:\Office project\AMS_17.05.2017\AMS\obj\Debug\AMS.dll
 D:\Office project\AMS_17.05.2017\AMS\obj\Debug\AMS.pdb
-D:\Office project final\AMS\AMS\bin\VMS\Reports\rptVehicleScheduleManual.rpt
-D:\Office project final\AMS\AMS\bin\VMS\Reports\rptVehicleScheduleManual.cs
-D:\Office project final\AMS\AMS\bin\AMS.dll.config
-D:\Office project final\AMS\AMS\bin\AMS.dll
-D:\Office project final\AMS\AMS\bin\AMS.pdb
-D:\Office project final\AMS\AMS\bin\AjaxControlToolkit.dll
-D:\Office project final\AMS\AMS\bin\Microsoft.QualityTools.Testing.Fakes.dll
-D:\Office project final\AMS\AMS\bin\Newtonsoft.Json.dll
-D:\Office project final\AMS\AMS\bin\Newtonsoft.Json.xml
-D:\Office project final\AMS\AMS\obj\Debug\AMS.csprojResolveAssemblyReference.cache
-D:\Office project final\AMS\AMS\obj\Debug\AMS.dll
-D:\Office project final\AMS\AMS\obj\Debug\AMS.pdb
 D:\VMS Projects\AMS\AMS\AMS\bin\VMS\Reports\rptVehicleScheduleManual.rpt
 D:\VMS Projects\AMS\AMS\AMS\bin\VMS\Reports\rptVehicleScheduleManual.cs
 D:\VMS Projects\AMS\AMS\AMS\bin\AMS.dll.config
@@ -347,3 +335,15 @@ C:\Users\MIS7\Downloads\AMS-master\AMS\AMS\bin\Newtonsoft.Json.xml
 C:\Users\MIS7\Downloads\AMS-master\AMS\AMS\obj\Debug\AMS.csprojResolveAssemblyReference.cache
 C:\Users\MIS7\Downloads\AMS-master\AMS\AMS\obj\Debug\AMS.dll
 C:\Users\MIS7\Downloads\AMS-master\AMS\AMS\obj\Debug\AMS.pdb
+D:\Office project final\AMS\AMS\bin\VMS\Reports\rptVehicleScheduleManual.rpt
+D:\Office project final\AMS\AMS\bin\VMS\Reports\rptVehicleScheduleManual.cs
+D:\Office project final\AMS\AMS\bin\AMS.dll.config
+D:\Office project final\AMS\AMS\bin\AMS.dll
+D:\Office project final\AMS\AMS\bin\AMS.pdb
+D:\Office project final\AMS\AMS\bin\AjaxControlToolkit.dll
+D:\Office project final\AMS\AMS\bin\Microsoft.QualityTools.Testing.Fakes.dll
+D:\Office project final\AMS\AMS\bin\Newtonsoft.Json.dll
+D:\Office project final\AMS\AMS\bin\Newtonsoft.Json.xml
+D:\Office project final\AMS\AMS\obj\Debug\AMS.dll
+D:\Office project final\AMS\AMS\obj\Debug\AMS.pdb
+D:\Office project final\AMS\AMS\obj\Debug\AMS.csprojResolveAssemblyReference.cache

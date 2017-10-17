@@ -2,7 +2,7 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <form class="form-horizontal"  runat="server" style="overflow: hidden;">
+    <form class="form-horizontal" runat="server" style="overflow: hidden;">
 
         <div class="container">
             <%--  <h2>Nav-tabs Dropdown <small>Vertical</small></h2>
@@ -14,7 +14,7 @@
                         <li class="active"><a href="#vtab1" data-toggle="tab">Basic Information</a></li>
                         <li><a href="#vtab2" data-toggle="tab">Registration</a></li>
                         <li><a href="#vtab4" data-toggle="tab">Insurance Information</a></li>
-                      <%--  <li><a href="#vtab3" data-toggle="tab">Mechanical Information</a></li>
+                        <%--  <li><a href="#vtab3" data-toggle="tab">Mechanical Information</a></li>
                         
                         <li><a href="#vtab5" data-toggle="tab">Fitness Information</a></li>--%>
                     </ul>
@@ -23,215 +23,215 @@
                     <div class="tab-content" style="border: 1px solid rgb(204, 204, 204); background-color: rgb(245, 245, 245);">
                         <div role="tabpanel" class="tab-pane fade in active" id="vtab1" style="margin-top: 125px;">
                             <section id="basicInformationsection">
-                            <div class="form-group">
-                                <asp:Label ID="lblId" CssClass="col-md-2 control-label driverid" runat="server" Text="ID :"></asp:Label>
-                                <div class="col-md-3">
-                                    <asp:TextBox ID="txtVehicleID" ReadOnly="true" runat="server" CssClass="form-control input-sm " placeholder="Vehicle ID "></asp:TextBox>
+                                <div class="form-group">
+                                    <asp:Label ID="lblId" CssClass="col-md-2 control-label driverid" runat="server" Text="ID :"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtVehicleID" ReadOnly="true" runat="server" CssClass="form-control input-sm " placeholder="Vehicle ID "></asp:TextBox>
+                                    </div>
+
+                                    <asp:Label ID="lblRegno" CssClass="col-md-2 control-label driverid" runat="server" Text="Serial No :"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtVhNo" runat="server" CssClass="form-control input-sm" data-rule-required="true" data-msg-required="Serial  is required" placeholder="Serial No "></asp:TextBox>
+                                    </div>
                                 </div>
 
-                                <asp:Label ID="lblRegno" CssClass="col-md-2 control-label driverid" runat="server" Text="Serial No :"></asp:Label>
-                                <div class="col-md-3">
-                                    <asp:TextBox ID="txtVhNo" runat="server" CssClass="form-control input-sm" data-rule-required="true" data-msg-required="Serial  is required" placeholder="Serial No "></asp:TextBox>
+                                <div class="form-group">
+                                    <asp:Label ID="Label7" CssClass="col-md-2 control-label driverid" runat="server" Text="Purchase Date :"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtdtPurchase" runat="server" CssClass="form-control input-sm date NRDate" data-rule-required="true" data-msg-required="Purchase Date is required" placeholder="Purchase Date"></asp:TextBox>
+
+                                    </div>
+
+                                    <asp:Label ID="Label8" CssClass="col-md-2 control-label driverid" runat="server" Text="Waranty :"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtWaranty" TextMode="Number" runat="server" CssClass="form-control input-sm " placeholder="Waranty "></asp:TextBox>
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="form-group">
+                                    <asp:Label ID="lblChassisno" CssClass="col-md-2 control-label driverid" runat="server" Text="Chassis No :"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtChassisno" runat="server" CssClass="form-control input-sm" data-rule-required="true" data-msg-required="Chassis Number is required" placeholder=" Chasss no "></asp:TextBox>
+                                    </div>
 
-                            <div class="form-group">
-                                <asp:Label ID="Label7" CssClass="col-md-2 control-label driverid" runat="server" Text="Purchase Date :"></asp:Label>
-                                <div class="col-md-3">
-                                    <asp:TextBox ID="txtdtPurchase"  runat="server" CssClass="form-control input-sm date NRDate" data-rule-required="true" data-msg-required="Purchase Date is required" placeholder="Purchase Date"></asp:TextBox>
-
-                                </div>
-
-                                <asp:Label ID="Label8" CssClass="col-md-2 control-label driverid" runat="server" Text="Waranty :"></asp:Label>
-                                <div class="col-md-3">
-                                    <asp:TextBox ID="txtWaranty" TextMode="Number" runat="server" CssClass="form-control input-sm " placeholder="Waranty "></asp:TextBox>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <asp:Label ID="lblChassisno" CssClass="col-md-2 control-label driverid" runat="server" Text="Chassis No :"></asp:Label>
-                                <div class="col-md-3">
-                                    <asp:TextBox ID="txtChassisno" runat="server" CssClass="form-control input-sm" data-rule-required="true" data-msg-required="Chassis Number is required" placeholder=" Chasss no "></asp:TextBox>
-                                </div>
-
-                                <asp:Label ID="lblBrandName" CssClass="col-md-2 control-label driverid" runat="server" Text="Price :"></asp:Label>
-                                <div class="col-md-3">
-                                    <asp:TextBox ID="txtPrice" TextMode="Number" runat="server" CssClass="form-control input-sm" data-rule-required="true" data-msg-required="Price is required" placeholder="Cost Price "></asp:TextBox>
-                                </div>
-                            </div>
-
-
-                            <div class="form-group">
-                                <asp:Label ID="lblModelName" CssClass="col-md-2 control-label driverid" runat="server" Text="Model Name :"></asp:Label>
-                                <div class="col-md-3">
-                                    <asp:TextBox ID="txtModelName" runat="server" CssClass="form-control input-sm" data-rule-required="true" data-msg-required="Model is required" placeholder=" Model Name "></asp:TextBox>
-                                </div>
-
-                                <asp:Label ID="lblVehicleType" CssClass="col-md-2 control-label driverid" runat="server" Text="Vehicle Type :"></asp:Label>
-                                <div class="col-md-3">
-                                    <asp:TextBox ID="txtVehicletype" runat="server" CssClass="form-control input-sm " placeholder="Vehicle Type "></asp:TextBox>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <asp:Label ID="lblModelYear" CssClass="col-md-2 control-label driverid" runat="server" Text="Model Year :"></asp:Label>
-                                <div class="col-md-3">
-                                    <asp:TextBox ID="txtModelYear" runat="server" CssClass="form-control input-sm" data-rule-required="true" data-msg-required="Model Year is required" placeholder=" Model Year "></asp:TextBox>
-                                </div>
-
-                                <asp:Label ID="lblRegistrationYear" CssClass="col-md-2 control-label driverid" runat="server" Text="Brand Name  :"></asp:Label>
-                                <div class="col-md-3">
-                                    <asp:TextBox ID="txtBrand" runat="server" CssClass="form-control input-sm" data-rule-required="true" data-msg-required="Brand Name is required" placeholder="Brand Name  "></asp:TextBox>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <asp:Label ID="lblTypeofbody" CssClass="col-md-2 control-label driverid" runat="server" Text="Type Of Body :"></asp:Label>
-                                <div class="col-md-3">
-                                    <asp:TextBox ID="txtBodytype" runat="server" CssClass="form-control input-sm" data-rule-required="true" data-msg-required="Body type is required" placeholder=" Type Of Body "></asp:TextBox>
-                                </div>
-
-                                <asp:Label ID="lblBodycolor" CssClass="col-md-2 control-label driverid" runat="server" Text="Body Color :"></asp:Label>
-                                <div class="col-md-3">
-                                    <asp:TextBox ID="txtBodyColor" runat="server" CssClass="form-control input-sm" data-rule-required="true" data-msg-required="Body Color is required" placeholder="Body Color "></asp:TextBox>
-                                </div>
-                            </div>
-
-
-                            <div class="form-group">
-                                <asp:Label ID="lblTiresize" CssClass="col-md-2 control-label driverid" runat="server" Text="Tire Size :"></asp:Label>
-                                <div class="col-md-3">
-                                    <asp:TextBox ID="txtTireSize" runat="server" CssClass="form-control input-sm " placeholder=" Tire Size "></asp:TextBox>
-                                </div>
-
-                                <asp:Label ID="lblFueltype" CssClass="col-md-2 control-label driverid" runat="server" Text="Fuel Type:"></asp:Label>
-                                <div class="col-md-3">
-                                    <%--<asp:TextBox ID="txtFueltype" runat="server" CssClass="form-control input-sm " placeholder="Fuel Type "></asp:TextBox>--%>
-
-                                    <asp:DropDownList ID="ddlFuelType" runat="server" CssClass="from-control input-sm" Style="width: 222px; height: 30px;">
-
-                                        <asp:ListItem> Select Fuel Type </asp:ListItem>
-                                        <asp:ListItem>Gas</asp:ListItem>
-                                        <asp:ListItem>Diesel</asp:ListItem>
-                                        <asp:ListItem>Petrol/Octen</asp:ListItem>
-                                    </asp:DropDownList>
-
-
-                                </div>
-                            </div>
-
-
-                            <div class="form-group">
-                                <asp:Label ID="lblDept" CssClass="col-md-2 control-label driverid" runat="server" Text="Dept/Depot:"></asp:Label>
-                                <div class="col-md-3">
-                                    <%-- <asp:TextBox ID="txtDepartment" runat="server" CssClass="form-control input-sm " placeholder=" Department or Depot "></asp:TextBox>--%>
-                                    <asp:DropDownList ID="ddlDepartment" AutoPostBack="false" runat="server" CssClass="from-control input-sm" Style="width: 215px; height: 30px;">
-                                    </asp:DropDownList>
-                                </div>
-
-                                <asp:Label ID="lblseatingcapacity" CssClass="col-md-2 control-label driverid" runat="server" Text="Seating Capacity:"></asp:Label>
-                                <div class="col-md-3">
-                                    <asp:TextBox ID="txtSeatingCapa" TextMode="Number" runat="server" CssClass="form-control input-sm" placeholder="Seating Capacity "></asp:TextBox>
+                                    <asp:Label ID="lblBrandName" CssClass="col-md-2 control-label driverid" runat="server" Text="Price :"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtPrice" TextMode="Number" runat="server" CssClass="form-control input-sm" data-rule-required="true" data-msg-required="Price is required" placeholder="Cost Price "></asp:TextBox>
+                                    </div>
                                 </div>
 
 
-                            </div>
+                                <div class="form-group">
+                                    <asp:Label ID="lblModelName" CssClass="col-md-2 control-label driverid" runat="server" Text="Model Name :"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtModelName" runat="server" CssClass="form-control input-sm" data-rule-required="true" data-msg-required="Model is required" placeholder=" Model Name "></asp:TextBox>
+                                    </div>
 
-                            <div class="form-group">
-                                <asp:Label ID="lblCylinder" CssClass="col-md-2 control-label driverid" Style="" runat="server" Text="   Cylinder Quantity:"></asp:Label>
-                                <div class="col-md-3">
-                                    <asp:TextBox ID="txtCylQty" TextMode="Number" runat="server" CssClass="form-control input-sm " placeholder=" Cylinder Quantity "></asp:TextBox>
+                                    <asp:Label ID="lblVehicleType" CssClass="col-md-2 control-label driverid" runat="server" Text="Vehicle Type :"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtVehicletype" runat="server" CssClass="form-control input-sm " placeholder="Vehicle Type "></asp:TextBox>
+                                    </div>
                                 </div>
 
-                                <asp:Label ID="Label6" CssClass="col-md-2 control-label driverid" runat="server" Text="Vendor :"></asp:Label>
-                                <div class="col-md-2">
-                                    <asp:DropDownList ID="ddlVendor" runat="server" CssClass="form-control input-sm " placeholder="--Select Vendor-- "></asp:DropDownList>
-                                </div>
-                            </div>
+                                <div class="form-group">
+                                    <asp:Label ID="lblModelYear" CssClass="col-md-2 control-label driverid" runat="server" Text="Model Year :"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtModelYear" runat="server" CssClass="form-control input-sm" data-rule-required="true" data-msg-required="Model Year is required" placeholder=" Model Year "></asp:TextBox>
+                                    </div>
 
-                            <div class="form-group">
-                                <div class="col-md-4" style="margin-left: 150px; margin-top: 15px; padding-bottom: 26px;">
-                                    <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-success save" OnClick="btnSave_Click" />
-                                    <%--<asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn btn-info update" />
+                                    <asp:Label ID="lblRegistrationYear" CssClass="col-md-2 control-label driverid" runat="server" Text="Brand Name  :"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtBrand" runat="server" CssClass="form-control input-sm" data-rule-required="true" data-msg-required="Brand Name is required" placeholder="Brand Name  "></asp:TextBox>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <asp:Label ID="lblTypeofbody" CssClass="col-md-2 control-label driverid" runat="server" Text="Type Of Body :"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtBodytype" runat="server" CssClass="form-control input-sm" data-rule-required="true" data-msg-required="Body type is required" placeholder=" Type Of Body "></asp:TextBox>
+                                    </div>
+
+                                    <asp:Label ID="lblBodycolor" CssClass="col-md-2 control-label driverid" runat="server" Text="Body Color :"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtBodyColor" runat="server" CssClass="form-control input-sm" data-rule-required="true" data-msg-required="Body Color is required" placeholder="Body Color "></asp:TextBox>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <asp:Label ID="lblTiresize" CssClass="col-md-2 control-label driverid" runat="server" Text="Tire Size :"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtTireSize" runat="server" CssClass="form-control input-sm " placeholder=" Tire Size "></asp:TextBox>
+                                    </div>
+
+                                    <asp:Label ID="lblFueltype" CssClass="col-md-2 control-label driverid" runat="server" Text="Fuel Type:"></asp:Label>
+                                    <div class="col-md-3">
+                                        <%--<asp:TextBox ID="txtFueltype" runat="server" CssClass="form-control input-sm " placeholder="Fuel Type "></asp:TextBox>--%>
+
+                                        <asp:DropDownList ID="ddlFuelType" runat="server" CssClass="from-control input-sm" Style="width: 222px; height: 30px;">
+
+                                            <asp:ListItem> Select Fuel Type </asp:ListItem>
+                                            <asp:ListItem>Gas</asp:ListItem>
+                                            <asp:ListItem>Diesel</asp:ListItem>
+                                            <asp:ListItem>Petrol/Octen</asp:ListItem>
+                                        </asp:DropDownList>
+
+
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <asp:Label ID="lblDept" CssClass="col-md-2 control-label driverid" runat="server" Text="Dept/Depot:"></asp:Label>
+                                    <div class="col-md-3">
+                                        <%-- <asp:TextBox ID="txtDepartment" runat="server" CssClass="form-control input-sm " placeholder=" Department or Depot "></asp:TextBox>--%>
+                                        <asp:DropDownList ID="ddlDepartment" AutoPostBack="false" runat="server" CssClass="from-control input-sm" Style="width: 215px; height: 30px;">
+                                        </asp:DropDownList>
+                                    </div>
+
+                                    <asp:Label ID="lblseatingcapacity" CssClass="col-md-2 control-label driverid" runat="server" Text="Seating Capacity:"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtSeatingCapa" TextMode="Number" runat="server" CssClass="form-control input-sm" placeholder="Seating Capacity "></asp:TextBox>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="form-group">
+                                    <asp:Label ID="lblCylinder" CssClass="col-md-2 control-label driverid" Style="" runat="server" Text="   Cylinder Quantity:"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtCylQty" TextMode="Number" runat="server" CssClass="form-control input-sm " placeholder=" Cylinder Quantity "></asp:TextBox>
+                                    </div>
+
+                                    <asp:Label ID="Label6" CssClass="col-md-2 control-label driverid" runat="server" Text="Vendor :"></asp:Label>
+                                    <div class="col-md-2">
+                                        <asp:DropDownList ID="ddlVendor" runat="server" CssClass="form-control input-sm " placeholder="--Select Vendor-- "></asp:DropDownList>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-4" style="margin-left: 150px; margin-top: 15px; padding-bottom: 26px;">
+                                        <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-success save" OnClick="btnSave_Click" />
+                                        <%--<asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn btn-info update" />
                                 <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="btn btn-primary clear" />--%>
+                                    </div>
                                 </div>
-                            </div>
-                                                                                                                  
-                           </section>
+
+                            </section>
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="vtab2" style="margin-top: 125px;">
-                            
+
                             <section id="vehiclesRegistration">
-                                
-                            <div class="form-group">
-                                <asp:Label ID="lblVehicleId" CssClass="col-md-2 control-label driverid" runat="server" Text="Chassis Number :"></asp:Label>
-                                <div class="col-md-3">
-                                    <asp:DropDownList ID="ddlVehicleId" AutoPostBack="false" runat="server" CssClass="from-control input-sm" Style="width: 218px; height: 32px;">
-                                    </asp:DropDownList>
+
+                                <div class="form-group">
+                                    <asp:Label ID="lblVehicleId" CssClass="col-md-2 control-label driverid" runat="server" Text="Chassis Number :"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:DropDownList ID="ddlVehicleId" AutoPostBack="false" runat="server" CssClass="from-control input-sm" Style="width: 218px; height: 32px;">
+                                        </asp:DropDownList>
+                                    </div>
+
+                                    <asp:Label ID="lblDOP" CssClass="col-md-2 control-label driverid" runat="server" Text="Registration Date :"></asp:Label>
+                                    <div class="col-md-4">
+                                        <asp:TextBox ID="txtDateRegistration" runat="server" CssClass="form-control input-sm date NRDate" data-rule-required="true" data-msg-required="Registration Date is required" placeholder=" Date Of Registration "></asp:TextBox>
+                                    </div>
                                 </div>
 
-                                <asp:Label ID="lblDOP" CssClass="col-md-2 control-label driverid" runat="server" Text="Registration Date :"></asp:Label>
-                                <div class="col-md-4">
-                                    <asp:TextBox ID="txtDateRegistration" runat="server" CssClass="form-control input-sm date NRDate" data-rule-required="true" data-msg-required="Registration Date is required" placeholder=" Date Of Registration "></asp:TextBox>
-                                </div>
-                            </div>
+                                <div class="form-group">
+                                    <asp:Label ID="lblPcost" CssClass="col-md-2 control-label driverid" runat="server" Text="Registration No :"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtRegistration" runat="server" CssClass="form-control input-sm" data-rule-required="true" data-msg-required="Registration Number is required" placeholder=" Registration No "></asp:TextBox>
+                                    </div>
+                                    <asp:Label ID="Label10" CssClass="col-md-2 control-label driverid" runat="server" Text="License No :"></asp:Label>
 
-                            <div class="form-group">
-                                <asp:Label ID="lblPcost" CssClass="col-md-2 control-label driverid" runat="server" Text="Registration No :"></asp:Label>
-                                <div class="col-md-3">
-                                    <asp:TextBox ID="txtRegistration" runat="server" CssClass="form-control input-sm" data-rule-required="true" data-msg-required="Registration Number is required" placeholder=" Registration No "></asp:TextBox>
-                                </div>
-                                <asp:Label ID="Label10" CssClass="col-md-2 control-label driverid" runat="server" Text="License No :"></asp:Label>
-
-                                <div class="col-md-4">
-                                    <asp:TextBox ID="txtLicenseNo" runat="server" CssClass="form-control input-sm" data-rule-required="true" data-msg-required="License No is required" placeholder=" License No "></asp:TextBox>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <asp:Label ID="lblExpirements" CssClass="col-md-2 control-label driverid" runat="server" Text=" license Expired :"></asp:Label>
-
-                                <div class="col-md-3">
-                                    <asp:TextBox ID="txtLicExpired" runat="server" CssClass="form-control input-sm date NRDate " placeholder=" Date Of license Expired "></asp:TextBox>
+                                    <div class="col-md-4">
+                                        <asp:TextBox ID="txtLicenseNo" runat="server" CssClass="form-control input-sm" data-rule-required="true" data-msg-required="License No is required" placeholder=" License No "></asp:TextBox>
+                                    </div>
                                 </div>
 
-                                <asp:Label ID="Label15" CssClass="col-md-2 control-label driverid" runat="server" Text=" Registered To :"></asp:Label>
-                                <div class="col-md-4">
-                                    <asp:TextBox ID="txtRegisteredTo" runat="server" CssClass="form-control input-sm " placeholder="Registered To "></asp:TextBox>
+                                <div class="form-group">
+                                    <asp:Label ID="lblExpirements" CssClass="col-md-2 control-label driverid" runat="server" Text=" license Expired :"></asp:Label>
+
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtLicExpired" runat="server" CssClass="form-control input-sm date NRDate " placeholder=" Date Of license Expired "></asp:TextBox>
+                                    </div>
+
+                                    <asp:Label ID="Label15" CssClass="col-md-2 control-label driverid" runat="server" Text=" Registered To :"></asp:Label>
+                                    <div class="col-md-4">
+                                        <asp:TextBox ID="txtRegisteredTo" runat="server" CssClass="form-control input-sm " placeholder="Registered To "></asp:TextBox>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <asp:Label ID="Label12" CssClass="col-md-2 control-label driverid" runat="server" Text=" Address :"></asp:Label>
-                                <div class="col-md-3">
-                                    <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control input-sm " placeholder="Address "></asp:TextBox>
+                                <div class="form-group">
+                                    <asp:Label ID="Label12" CssClass="col-md-2 control-label driverid" runat="server" Text=" Address :"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control input-sm " placeholder="Address "></asp:TextBox>
+                                    </div>
+
+                                    <asp:Label ID="Label11" CssClass="col-md-2 control-label driverid" runat="server" Text=" Email :"></asp:Label>
+                                    <div class="col-md-4">
+                                        <asp:TextBox ID="txtEmail" TextMode="Email" runat="server" CssClass="form-control input-sm" placeholder="Address "></asp:TextBox>
+                                    </div>
                                 </div>
 
-                                <asp:Label ID="Label11" CssClass="col-md-2 control-label driverid" runat="server" Text=" Email :"></asp:Label>
-                                <div class="col-md-4">
-                                    <asp:TextBox ID="txtEmail" TextMode="Email" runat="server" CssClass="form-control input-sm" placeholder="Address "></asp:TextBox>
-                                </div>
-                            </div>
+                                <div class="form-group">
+                                    <asp:Label ID="Label13" CssClass="col-md-2 control-label driverid" runat="server" Text="Contact :"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtContact" runat="server" CssClass="form-control input-sm " placeholder=" Contact "></asp:TextBox>
+                                    </div>
 
-                            <div class="form-group">
-                                <asp:Label ID="Label13" CssClass="col-md-2 control-label driverid" runat="server" Text="Contact :"></asp:Label>
-                                <div class="col-md-3">
-                                    <asp:TextBox ID="txtContact" runat="server" CssClass="form-control input-sm " placeholder=" Contact "></asp:TextBox>
+                                    <asp:Label ID="Label14" CssClass="col-md-2 control-label driverid" runat="server" Text="Reg. Document :"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox ID="txtDocfile" runat="server" CssClass="form-control input-sm " placeholder="Document "></asp:TextBox>
+                                        <asp:FileUpload ID="FileUpload1" runat="server" />
+
+                                    </div>
                                 </div>
 
-                                <asp:Label ID="Label14" CssClass="col-md-2 control-label driverid" runat="server" Text="Reg. Document :"></asp:Label>
-                                <div class="col-md-3">
-                                    <asp:TextBox ID="txtDocfile" runat="server" CssClass="form-control input-sm " placeholder="Document "></asp:TextBox>
-                                    <asp:FileUpload ID="FileUpload1" runat="server" />
-
+                                <div class="form-group" style="margin-bottom: 1px;">
+                                    <div class="col-md-9" style="margin-left: 150px; margin-top: 15px; padding-bottom: 26px;">
+                                        <asp:Button ID="BtnSave1" runat="server" Text="Save" CssClass="btn btn-success save" OnClick="btnSave1_Click" />
+                                        <asp:Button ID="btnUpdate1" runat="server" Text="Update" CssClass="btn btn-success save" OnClick="btnUpdate1_Click" />
+                                        <asp:Button ID="btnRefresh1" runat="server" CssClass="btn btn-primary" Style="width: 95px; margin-left: 15px;" Text="Clear" />
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div class="form-group" style="margin-bottom: 1px;">
-                                <div class="col-md-9" style="margin-left: 150px; margin-top: 15px; padding-bottom: 26px;">
-                                    <asp:Button ID="BtnSave1" runat="server" Text="Save" CssClass="btn btn-success save" OnClick="btnSave1_Click" />
-                                    <asp:Button ID="btnUpdate1" runat="server" Text="Update" CssClass="btn btn-success save" OnClick="btnUpdate1_Click" />
-                                    <asp:Button ID="btnRefresh1" runat="server" CssClass="btn btn-primary" Style="width: 95px; margin-left: 15px;" Text="Clear" />
-                                </div>
-                            </div>
 
                             </section>
 
@@ -280,88 +280,106 @@
 
                             </div>
                         </div>
-                    
-                        <div role="tabpanel" class="tab-pane fade in" id="vtab4" style="margin-top: 120px;">    
-                       <section id="InsuranceSection">
-                           <div class="form-group">
-                               <asp:Label ID="lblCompanyName" CssClass="col-md-2 control-label" runat="server" Text="Compnay Name :"></asp:Label>
-                               <div class="col-sm-3">
-                                   <asp:TextBox ID="txtCompanyName" CssClass="form-control input-sm " name="CompanyName" placeholder="Company Name"  runat="server"></asp:TextBox>
-                               </div>
-                                
-                               <asp:Label ID="lblCompanyNumber" CssClass="col-md-2 control-label" runat="server" Text="Company Number:"></asp:Label>
-                               <div class="col-md-3">
-                                   <asp:TextBox ID="txtCompanyNumber" runat="server" CssClass="form-control input-sm" placeholder="Company Number "></asp:TextBox>
-                               </div>
-                           </div>
-                            
-                           <div class="form-group">
-                               <asp:Label ID="lblVehicleReg" CssClass="col-md-2 control-label" runat="server" Text="Registration :"></asp:Label>
-                               <div class="col-sm-3">
-                                   <asp:DropDownList ID="ddlVehicleRegNo" AutoPostBack="false" runat="server" CssClass="from-control input-sm" Style="width: 218px; height: 28px;">
-                                       <asp:ListItem Selected="True" Value="0" Text="Select"></asp:ListItem>
-                                   </asp:DropDownList>
-                               </div>
-                                
-                               <asp:Label ID="lblPolicyNumber" CssClass="col-md-2 control-label" runat="server" Text="Policy Number :"></asp:Label>
-                               <div class="col-md-3">
-                                   <asp:TextBox ID="txtPlicyNumber" runat="server" CssClass="form-control input-sm" placeholder="Policy Number "></asp:TextBox>
-                               </div>
-                           </div>
-                      
-                           <div class="form-group">
-                               <asp:Label ID="lblEffectiveDate" CssClass="col-md-2 control-label" runat="server" Text="Effective Date :"></asp:Label>
-                               <div class="col-sm-3">
-                                   <asp:TextBox ID="txtEffectiveDate" runat="server" CssClass="form-control input-sm date NRDate" placeholder=" Effective Date "></asp:TextBox>  
-                               </div>
-                                
-                               <asp:Label ID="lblExpireDate" CssClass="col-md-2 control-label" runat="server" Text="Expire Date :"></asp:Label>
-                               <div class="col-md-3">
-                                   <asp:TextBox ID="txtExpireDate" runat="server" CssClass="form-control input-sm date NRDate" placeholder="Expire Date "></asp:TextBox>
-                               </div>
-                           </div>
 
-                           <div class="form-group">
-                               <asp:Label ID="lblInsuranceType" CssClass="col-md-2 control-label" runat="server" Text="Insurance Type :"></asp:Label>
-                               <div class="col-sm-3">
-                                   <asp:DropDownList ID="DropDownList1" runat="server" CssClass="from-control input-sm" Style="width: 222px; height: 30px;">
+                        <div role="tabpanel" class="tab-pane fade in" id="vtab4">
 
-                                       <asp:ListItem>---Select---</asp:ListItem>
-                                       <asp:ListItem>Premium</asp:ListItem>
-                                       <asp:ListItem>Basic</asp:ListItem>
-                                       
-                                   </asp:DropDownList>
-                               </div>
-                                
-                               <asp:Label ID="lblNote" CssClass="col-md-2 control-label" runat="server" Text="Note :"></asp:Label>
-                               <div class="col-md-3">
-                                   <asp:TextBox ID="txtNote" TextMode="MultiLine"  runat="server" Columns="12" Rows="2" CssClass="form-control input-sm resige"></asp:TextBox>
-                               </div>
-                           </div>
-                           
-                           <div class="form-group" style="margin-bottom: 1px;">
-                               <div class="col-md-9" style="margin-left: 150px; margin-top: 15px; padding-bottom: 26px;">
-                                   <asp:Button ID="btnSaveInsurence" runat="server" Text="Save" CssClass="btn btn-success save" />
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title headtitle" style="font-family: monospace"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>Insurance Registration for Vehicles</h3>
+                                </div>
+                                <div class="panel-body" style="margin-bottom: -100px;">
+                                    <div class="form-group" style="margin-top: 114px;">
+                                        <asp:Label ID="lblCode" CssClass="col-md-2  control-label driverid" runat="server" Text="Code :"></asp:Label>
+                                        <div class="col-md-4">
+                                            <asp:TextBox ID="txtCode" runat="server" CssClass="form-control input-sm" Style="background-color: #e6dfab;" ReadOnly="true"></asp:TextBox>
+                                        </div>
 
-                               </div>
-                           </div>
+                                        <asp:Label ID="lblCompany" CssClass="col-md-2 control-label driverid" runat="server" Text="Registration No:"></asp:Label>
+                                        <div class="col-md-4">
+                                            <asp:DropDownList ID="ddlRegNO" runat="server" CssClass="form-control input-sm"></asp:DropDownList>
+                                        </div>
+                                    </div>
 
-                                       
-                       </section>                     
+
+                                    <div class="form-group">
+                                        <asp:Label ID="lblCompanyName" CssClass="col-md-2  control-label driverid" runat="server" Text="Company Name :"></asp:Label>
+                                        <div class="col-md-4">
+                                            <asp:DropDownList ID="ddlCompanyName" runat="server" CssClass="form-control input-sm"></asp:DropDownList>
+                                        </div>
+
+                                        <asp:Label ID="lblBranchName" CssClass="col-md-2 control-label driverid" runat="server" Text="Branch Name :"></asp:Label>
+                                        <div class="col-md-4">
+                                            <asp:DropDownList ID="ddlBranchName" runat="server" CssClass="form-control input-sm"></asp:DropDownList>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <asp:Label ID="lblPloicyNumber" CssClass="col-md-2  control-label driverid" runat="server" Text="Policy Number :"></asp:Label>
+                                        <div class="col-md-4">
+                                            <asp:TextBox ID="txtPolicyNumber" runat="server" CssClass="form-control input-sm"></asp:TextBox>
+                                        </div>
+
+                                        <asp:Label ID="lblMrNO" CssClass="col-md-2 control-label driverid" runat="server" Text="MR NO:"></asp:Label>
+                                        <div class="col-md-4">
+                                            <asp:TextBox ID="txtmrNo" runat="server" CssClass="form-control input-sm"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <asp:Label ID="lblEffectiveDate" CssClass="col-md-2  control-label driverid" runat="server" Text="Effective Date :"></asp:Label>
+                                        <div class="col-md-4">
+                                            <asp:TextBox ID="txtEffectiveDate" runat="server" CssClass="form-control input-sm"></asp:TextBox>
+                                        </div>
+
+                                        <asp:Label ID="lblExpDate" CssClass="col-md-2 control-label driverid" runat="server" Text="Expire Date:"></asp:Label>
+                                        <div class="col-md-4">
+                                            <asp:TextBox ID="txtExpDate" runat="server" CssClass="form-control input-sm"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <asp:Label ID="lblGrapicalarea" CssClass="col-md-2  control-label driverid" runat="server" Text="Graphical Area :"></asp:Label>
+                                        <div class="col-md-4">
+                                            <asp:TextBox ID="txtGraphicalarea" runat="server" CssClass="form-control input-sm"></asp:TextBox>
+                                        </div>
+
+                                        <asp:Label ID="lblIssueDate" CssClass="col-md-2 control-label driverid" runat="server" Text="Issue Date:"></asp:Label>
+                                        <div class="col-md-4">
+                                            <asp:TextBox ID="txtIssueDate" runat="server" CssClass="form-control input-sm"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <asp:Label ID="lblNote" CssClass="col-md-2 col-md-offset-6 control-label driverid" runat="server" Text="Note :"></asp:Label>
+                                        <div class="col-md-4">
+                                            <asp:TextBox ID="txtNote" TextMode="MultiLine" Rows="3" Columns="10" runat="server" CssClass="form-control input-sm resige"></asp:TextBox>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-sm-6 col-md-offset-10">
+                                            <asp:Button ID="Button1" runat="server" Text="Save" CssClass="btn btn-group-lg btn-primary"/>
+                                            <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn btn-group-lg  btn-success" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </form>
-    
- <nav class="navbar navbar-default">
-        <div class="footer container" style="text-align: center; margin-top: 15px; ">
+
+    <nav class="navbar navbar-default">
+        <div class="footer container" style="text-align: center; margin-top: 15px;">
             <p>Copyright &copy; 2016 Code &amp; Design HDC(MIS). All rights reserved.</p>
         </div>
-  </nav>  
-    
+    </nav>
+
 
     <script type="text/javascript">
         function showConfirm(event) {
