@@ -88,14 +88,14 @@
                           
                         </div>
                    <div class="form-group" >
-                            <asp:Label ID="Label10" CssClass="col-md-2  control-label driverid" runat="server" Text="No Tyres:"></asp:Label>
+                            <asp:Label ID="Label10" CssClass="col-md-2  control-label driverid" runat="server" Text="Tax Period:"></asp:Label>
                             <div class="col-md-3">
-                                <asp:TextBox ID="txtNoOfTyre" runat="server" data-rule-required="true" data-msg-required="Field Required" CssClass="form-control input-sm"></asp:TextBox>
+                                <asp:TextBox ID="txtTaxPeriod" runat="server" data-rule-required="true" data-msg-required="Field Required" CssClass="form-control input-sm"></asp:TextBox>
                             </div>
                             
-                            <asp:Label ID="Label11" CssClass="col-md-2  control-label driverid" runat="server" Text="Tyre Size:"></asp:Label>
+                            <asp:Label ID="Label11" CssClass="col-md-2  control-label driverid" runat="server" Text="Pricipal Amount:"></asp:Label>
                             <div class="col-md-3">
-                                <asp:TextBox ID="txtTyreSize" runat="server" data-rule-required="true" data-msg-required="Field  Required" CssClass="form-control input-sm"></asp:TextBox>
+                                <asp:TextBox ID="txtPrincipalAmt" runat="server" data-rule-required="true" data-msg-required="Field  Required" CssClass="form-control input-sm"></asp:TextBox>
                             </div>
                           
                         </div>
@@ -103,100 +103,19 @@
 
 
                          <div class="form-group" >
-                            <asp:Label ID="Label12" CssClass="col-md-2  control-label driverid" runat="server" Text="OverHang(Front):"></asp:Label>
+                            <asp:Label ID="Label12" CssClass="col-md-2  control-label driverid" runat="server" Text="Fine/Additional(TK):"></asp:Label>
                             <div class="col-md-3">
-                                <asp:TextBox ID="txtOverHangFront" runat="server" data-rule-required="true" data-msg-required="Field Required" CssClass="form-control input-sm"></asp:TextBox>
+                                <asp:TextBox ID="txtFineamt" runat="server" data-rule-required="true" data-msg-required="Field Required" CssClass="form-control input-sm"></asp:TextBox>
                             </div>
                             
-                            <asp:Label ID="Label13" CssClass="col-md-2  control-label driverid" runat="server" Text="OverHang(Back):"></asp:Label>
+                            <asp:Label ID="Label13" CssClass="col-md-2  control-label driverid" runat="server" Text="Total Amount:"></asp:Label>
                             <div class="col-md-3">
-                                <asp:TextBox ID="txtOverHangBack" runat="server" data-rule-required="true" data-msg-required="Field  Required" CssClass="form-control input-sm"></asp:TextBox>
+                                <asp:TextBox ID="txtTotalAmt" runat="server" data-rule-required="true" data-msg-required="Field  Required" CssClass="form-control input-sm"></asp:TextBox>
                             </div>
                           
                         </div>
-
-                         <div class="form-group" >
-                            <asp:Label ID="Label14" CssClass="col-md-2  control-label driverid" runat="server" Text="Name:"></asp:Label>
-                            <div class="col-md-3">
-                                <asp:TextBox ID="txtName" runat="server" data-rule-required="true" data-msg-required="Field Required" CssClass="form-control input-sm"></asp:TextBox>
-                            </div>
-                            
-                            <asp:Label ID="Label15" CssClass="col-md-2  control-label driverid" runat="server" Text="Father/Husband:"></asp:Label>
-                            <div class="col-md-3">
-                                <asp:TextBox ID="txtFather" runat="server" data-rule-required="true" data-msg-required="Field  Required" CssClass="form-control input-sm"></asp:TextBox>
-                            </div>
-                          
-                        </div>
-
-
-                       <div class="form-group" >
-                            <asp:Label ID="Label16" CssClass="col-md-2  control-label driverid" runat="server" Text="Address:"></asp:Label>
-                            <div class="col-md-3">
-                                <asp:TextBox ID="txtAddress" runat="server" data-rule-required="true" data-msg-required="Field Required" CssClass="form-control input-sm"></asp:TextBox>
-                            </div>
-                            
-                         <asp:Label ID="Label18" CssClass="col-md-2  control-label driverid" runat="server" Text="TIN:"></asp:Label>
-                            <div class="col-md-3">
-                                <asp:TextBox ID="txtTin" runat="server" data-rule-required="true" data-msg-required="Field Required" CssClass="form-control input-sm"></asp:TextBox>
-                            </div>
-                          
-                        </div>
-
-
-
-                    <div class="form-group">
-
-                        <asp:Label ID="Label19" CssClass="col-md-2  control-label driverid" runat="server" Text="From Date:"></asp:Label>
-                        <div class="col-md-3">
-                            <asp:TextBox ID="txtFrmDate" runat="server" data-rule-required="true" data-msg-required="Field  Required" CssClass="form-control input-sm"></asp:TextBox>
-                        </div>
-
-                        <asp:Label ID="Label17" CssClass="col-md-2  control-label driverid" runat="server" Text="To Date:"></asp:Label>
-                        <div class="col-md-3">
-                            <asp:TextBox ID="txtTodate" runat="server" data-rule-required="true" data-msg-required="Field  Required" CssClass="form-control input-sm"></asp:TextBox>
-                        </div>
-
-                    </div>
-
-                   <div class="form-group">
-
-                        <asp:Label ID="Label20" CssClass="col-md-2  control-label driverid" runat="server" Text="Approved Date:"></asp:Label>
-                        <div class="col-md-3">
-                            <asp:TextBox ID="txtApprovedDate" runat="server" data-rule-required="true" data-msg-required="Field  Required" CssClass="form-control input-sm"></asp:TextBox>
-                        </div>
-
-                        <asp:Label ID="Label21" CssClass="col-md-2  control-label driverid" runat="server" Text="Visit Date:"></asp:Label>
-                        <div class="col-md-3">
-                            <asp:TextBox ID="txtVisitDate" runat="server" data-rule-required="true" data-msg-required="Field  Required" CssClass="form-control input-sm"></asp:TextBox>
-                        </div>
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <asp:Label ID="Label22" CssClass="col-md-2  control-label driverid" runat="server" Text="Visitor Name:"></asp:Label>
-                        <div class="col-md-3">
-                            <asp:TextBox ID="txtVisitor" runat="server" data-rule-required="true" data-msg-required="Field  Required" CssClass="form-control input-sm"></asp:TextBox>
-                        </div>
-
-                        <asp:Label ID="Label23" CssClass="col-md-2  control-label driverid" runat="server" Text="Designation:"></asp:Label>
-                        <div class="col-md-3">
-                            <asp:TextBox ID="txtDesignation" runat="server" data-rule-required="true" data-msg-required="Field  Required" CssClass="form-control input-sm"></asp:TextBox>
-                        </div>
-
-                    </div>
-
-                       <div class="form-group">
-
-                        <asp:Label ID="Label24" CssClass="col-md-2  control-label driverid" runat="server" Text="Area Name:"></asp:Label>
-                        <div class="col-md-3">
-                            <asp:TextBox ID="txtArea" runat="server" data-rule-required="true" data-msg-required="Field  Required" CssClass="form-control input-sm"></asp:TextBox>
-                        </div>
-
-                      
-
-                    </div>
-
+                                          
+                    
                     <div class="form-group">
                         <div class="col-sm-6 col-md-offset-7">
                             <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-group-lg btn-primary"  />

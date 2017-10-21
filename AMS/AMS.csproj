@@ -1401,7 +1401,10 @@
     <Content Include="VMS\Pages\Fitness.aspx" />
     <Content Include="VMS\Pages\gasAmount.aspx" />
     <Content Include="VMS\Pages\InsBranch.aspx" />
+<<<<<<< HEAD
     <Content Include="VMS\Pages\PurchaseAmount.aspx" />
+=======
+>>>>>>> 54ce17a0826d8e93401d842342a18e9ba8d91377
     <Content Include="VMS\Pages\TaxToken.aspx" />
     <Content Include="VMS\Pages\VehicleSchedule.aspx" />
     <Content Include="VMS\Resourcs\Scripts\jquery-3.2.1.js" />
@@ -1601,6 +1604,7 @@
     <Compile Include="VMS\Pages\InsuranceCompany.aspx.designer.cs">
       <DependentUpon>InsuranceCompany.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="VMS\Pages\PurchaseAmount.aspx.cs">
       <DependentUpon>PurchaseAmount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1608,6 +1612,8 @@
     <Compile Include="VMS\Pages\PurchaseAmount.aspx.designer.cs">
       <DependentUpon>PurchaseAmount.aspx</DependentUpon>
     </Compile>
+=======
+>>>>>>> 54ce17a0826d8e93401d842342a18e9ba8d91377
     <Compile Include="VMS\Pages\TaxToken.aspx.cs">
       <DependentUpon>TaxToken.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
