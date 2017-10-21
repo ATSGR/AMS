@@ -24,12 +24,12 @@ namespace AMS.VMS.DAL
         }
 
         //insert method for vehicles insurence information....
-
-        public void Insert_Vehicles_Insurence_Info(int option, string companyNumber, string companyName, string registrationNumber, string policyNumber,   
-            string effectiveDate, string expireDate, string createdBy)
+        public void InsertVehiclesInsuranceInformation(int option, string code, string vehiclesRegNo, string companyName, string branchName, string PolicyNumber, string effectiveDate,
+        string expireDate, string grapicalArea, string issuDate, string mrNo, string notes, string createdBy)
         {
-            string query = "[Insert_Vehicle_Insurance]'" + option + "', '" + companyNumber + "', '" + companyName +   "' ,'" + registrationNumber + "','" 
-                + policyNumber + "', '" + effectiveDate + "','" + expireDate + "', '" + createdBy + "'";
+
+            string query = " [Insert_Vehicle_Insurance_Info]'" + option + "', '" + code + "', '" + vehiclesRegNo + "', '" + companyName + "', '" + branchName + "', '"
+                + PolicyNumber + "', '" + effectiveDate + "','" + expireDate + "', '" + grapicalArea + "','" + issuDate + "','" + mrNo + "','" + notes + "','" + createdBy + "'";
             DataExecute.GetDataSet(query);
 
         }
@@ -104,5 +104,43 @@ namespace AMS.VMS.DAL
            dt = DataExecute.GetDataSet(query).Tables[0];
            return dt;
        }
+
+
+
+        //functionnal work for vehicle insurances.....
+
+
+       public DataTable InsuranceCompany()
+       {
+           string query = "SELECT DISTINCT[Companyname] FROM [AMS_DB]. [dbo].[Insurance_Company_Info]";
+           dt = DataExecute.GetDataSet(query).Tables[0];
+           return dt;
+       }
+
+
+       public DataTable InsuranceBranchName()
+       {
+
+           string query = "SELECT DISTINCT [Branch] AS BranchName FROM [AMS_DB].[dbo].[Insurance_Company_BranchInfo]";
+           dt = DataExecute.GetDataSet(query).Tables[0];
+           return dt;
+
+       }
+
+
+
+       public DataTable GetMaxVehiclesInsuranceCode()
+       {
+           string query = "SELECT  isnull(MAX(Code),0)+1 as CountId FROM Vehicles_Insurance_Information";
+           dt = DataExecute.GetDataSet(query).Tables[0];
+           return dt;
+       }
+
+
+
+
+
+
+
     }
 }

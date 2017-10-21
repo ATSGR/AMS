@@ -45,9 +45,5 @@ namespace AMS.DAL
             return dt;
 
         }
-
-
-
-
     }
 }

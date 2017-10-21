@@ -346,4 +346,3 @@ D:\Office project final\AMS\AMS\bin\Newtonsoft.Json.dll
 D:\Office project final\AMS\AMS\bin\Newtonsoft.Json.xml
 D:\Office project final\AMS\AMS\obj\Debug\AMS.dll
 D:\Office project final\AMS\AMS\obj\Debug\AMS.pdb
-D:\Office project final\AMS\AMS\obj\Debug\AMS.csprojResolveAssemblyReference.cache

@@ -330,12 +330,12 @@
                                     <div class="form-group">
                                         <asp:Label ID="lblEffectiveDate" CssClass="col-md-2  control-label driverid" runat="server" Text="Effective Date :"></asp:Label>
                                         <div class="col-md-4">
-                                            <asp:TextBox ID="txtEffectiveDate" runat="server" CssClass="form-control input-sm"></asp:TextBox>
+                                            <asp:TextBox ID="txtEffectiveDate" runat="server" CssClass="form-control input-sm date NRDate "></asp:TextBox>
                                         </div>
 
                                         <asp:Label ID="lblExpDate" CssClass="col-md-2 control-label driverid" runat="server" Text="Expire Date:"></asp:Label>
                                         <div class="col-md-4">
-                                            <asp:TextBox ID="txtExpDate" runat="server" CssClass="form-control input-sm"></asp:TextBox>
+                                            <asp:TextBox ID="txtExpDate" runat="server" CssClass="form-control input-sm date NRDate"></asp:TextBox>
                                         </div>
                                     </div>
 
@@ -347,7 +347,7 @@
 
                                         <asp:Label ID="lblIssueDate" CssClass="col-md-2 control-label driverid" runat="server" Text="Issue Date:"></asp:Label>
                                         <div class="col-md-4">
-                                            <asp:TextBox ID="txtIssueDate" runat="server" CssClass="form-control input-sm"></asp:TextBox>
+                                            <asp:TextBox ID="txtIssueDate" runat="server" CssClass="form-control input-sm date NRDate"></asp:TextBox>
                                         </div>
                                     </div>
 
@@ -360,13 +360,12 @@
 
                                     <div class="form-group">
                                         <div class="col-sm-6 col-md-offset-10">
-                                            <asp:Button ID="Button1" runat="server" Text="Save" CssClass="btn btn-group-lg btn-primary"/>
+                                            <asp:Button ID="btnInsuranceSave" runat="server" Text="Save" CssClass="btn btn-group-lg btn-primary" OnClick="btnInsuranceSave_Click" />
                                             <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn btn-group-lg  btn-success" />
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -451,13 +450,3 @@
         }
     </style>
 </asp:Content>
-
-
-
-
-
-
-
-
-
-

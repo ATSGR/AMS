@@ -21,7 +21,7 @@ namespace AMS.VMS.Pages
         int option = 1;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (objSession.curent.Username!=null)
+            if (objSession.curent.Username != null)
             {
 
                 if (!IsPostBack)
@@ -30,12 +30,10 @@ namespace AMS.VMS.Pages
                     BindMax();
                     BindVehicleChassisNo();
                     BinddEPARTMENT();
-                  
-                    
-                   
-                    //DropDownList1.Items.Add(new ListItem("Select", "0", true))
-                    
-                    //BindRegistrationTogrid();
+                    BindInsuranceCompany();
+                    BindBranchname();
+                    BindVehiclesRegNo();
+                    BindMaxInsuranceCode();
                 }
             }
 
@@ -46,7 +44,7 @@ namespace AMS.VMS.Pages
             }
 
 
-           
+
         }
 
 
@@ -64,7 +62,7 @@ namespace AMS.VMS.Pages
         }
         private void BindMax()
         {
-            dt=objdalVehicleInformation.GetMaxVehicleId();
+            dt = objdalVehicleInformation.GetMaxVehicleId();
             objCommonClass.myfBindMaxValueInFourDigit(txtVehicleID, dt);
         }
 
@@ -83,14 +81,14 @@ namespace AMS.VMS.Pages
 
         private void BindRegistrationTogrid()
         {
-            grdVehicleRegistration.DataSource =objdalVehicleInformation.GetVehicleRegistration();
+            grdVehicleRegistration.DataSource = objdalVehicleInformation.GetVehicleRegistration();
             grdVehicleRegistration.DataBind();
         }
 
 
         private void BindVehicleChassisNo()
         {
-            dt =objdalVehicleInformation.VehicleId();
+            dt = objdalVehicleInformation.VehicleId();
             ddlVehicleId.DataSource = dt;
             ddlVehicleId.DataBind();
 
@@ -100,12 +98,6 @@ namespace AMS.VMS.Pages
             ddlVehicleId.DataBind();
 
         }
-
-        // bind vehicle registraion number in insurance form
-
-
-       
-
 
         private void BinddEPARTMENT()
         {
@@ -185,12 +177,12 @@ namespace AMS.VMS.Pages
             //Response.AddHeader("content-disposition", "attachment;filename="
 
             //+ dt.Rows[0]["RegNo"].ToString());
-            string reg=dt.Rows[0]["RegNo"].ToString();
+            string reg = dt.Rows[0]["RegNo"].ToString();
 
 
             Response.AddHeader("content-disposition", "attachment;filename="
 
-          + "'"+reg+"'.pdf");
+          + "'" + reg + "'.pdf");
 
             Response.BinaryWrite(bytes);
 
@@ -199,10 +191,10 @@ namespace AMS.VMS.Pages
             Response.End();
 
         }
-        
+
 
         protected void btnlink(object sender, EventArgs e)
-        { 
+        {
             int i = 0;
             GridViewRow grdrow = (GridViewRow)(sender as Control).Parent.Parent;
             int RowIndex = grdrow.RowIndex;
@@ -211,12 +203,12 @@ namespace AMS.VMS.Pages
             txtDateRegistration.Text = grdVehicleRegistration.Rows[RowIndex].Cells[2].Text;
             txtLicenseNo.Text = grdVehicleRegistration.Rows[RowIndex].Cells[3].Text;
             txtLicExpired.Text = grdVehicleRegistration.Rows[RowIndex].Cells[4].Text;
-          
-           txtRegisteredTo.Text = grdVehicleRegistration.Rows[RowIndex].Cells[5].Text;
-           txtAddress.Text = grdVehicleRegistration.Rows[RowIndex].Cells[6].Text;
-           txtEmail.Text = grdVehicleRegistration.Rows[RowIndex].Cells[7].Text;
-           txtContact.Text = grdVehicleRegistration.Rows[RowIndex].Cells[8].Text;
-          
+
+            txtRegisteredTo.Text = grdVehicleRegistration.Rows[RowIndex].Cells[5].Text;
+            txtAddress.Text = grdVehicleRegistration.Rows[RowIndex].Cells[6].Text;
+            txtEmail.Text = grdVehicleRegistration.Rows[RowIndex].Cells[7].Text;
+            txtContact.Text = grdVehicleRegistration.Rows[RowIndex].Cells[8].Text;
+
             //btnUpdate.Enabled = true;
         }
 
@@ -227,7 +219,7 @@ namespace AMS.VMS.Pages
             int RowIndex = grdrow.RowIndex;
             string vid = grdVehicleRegistration.Rows[RowIndex].Cells[0].Text;
             string strQuery = "SELECT     VId, RegNo, RegDocFile FROM         Vehicle_Registration where VId=@vid";
-            
+
             SqlCommand cmd = new SqlCommand(strQuery);
             cmd.Parameters.Add("@vid", SqlDbType.Int).Value = vid;
             DataTable dt = GetData(cmd);
@@ -347,7 +339,7 @@ namespace AMS.VMS.Pages
             //string depot = txtDepartment.Text; 
             string vendorId = ddlVendor.Text;
             string UserId = "";
-            objdalVehicleInformation.Insert_Vehicle_info(option, vid, VNo, ModelNo, ModelYear, ChassisNo, BrandName, Vtype, BodyType, BodyColor, TireSize, FuelType, PuchaseDate,  SeatingCapacity, Price, Waranty, CylinderSize, depot, vendorId, UserId);
+            objdalVehicleInformation.Insert_Vehicle_info(option, vid, VNo, ModelNo, ModelYear, ChassisNo, BrandName, Vtype, BodyType, BodyColor, TireSize, FuelType, PuchaseDate, SeatingCapacity, Price, Waranty, CylinderSize, depot, vendorId, UserId);
 
         }
 
@@ -372,103 +364,179 @@ namespace AMS.VMS.Pages
             BindMax();
         }
 
-
-
-        // }
-
-
-
-
         private void AccessVehicleREgistration()
         {
-            //if (!FileUpload1.HasFile)
-            //{
-            //    Response.Write("No file Selected"); return;
-            //}
-            //else
-            //{
-                string filename = Path.GetFileName(FileUpload1.PostedFile.FileName);
-                string extension = Path.GetExtension(filename);
-                string contentType = FileUpload1.PostedFile.ContentType;
-                HttpPostedFile file = FileUpload1.PostedFile;
-                byte[] document = new byte[file.ContentLength];
-                file.InputStream.Read(document, 0, file.ContentLength);
+            string filename = Path.GetFileName(FileUpload1.PostedFile.FileName);
+            string extension = Path.GetExtension(filename);
+            string contentType = FileUpload1.PostedFile.ContentType;
+            HttpPostedFile file = FileUpload1.PostedFile;
+            byte[] document = new byte[file.ContentLength];
+            file.InputStream.Read(document, 0, file.ContentLength);
 
-                 string vid = ddlVehicleId.Text;
-                string RegNo = txtRegistration.Text;
-                string RegDate = txtDateRegistration.Text;
-                string LiCNo = txtLicenseNo.Text;
-                string LicenseExDate = txtLicExpired.Text;
-                string RegTo = txtRegisteredTo.Text;
-                string Address = txtAddress.Text;
-                string Email = txtEmail.Text;
-                string ContactNo = txtContact.Text;
-                //VarBinary RegDocFile = document;
-                 //byte[] RegDocFile =document;
-                string UserId = "HR";
-                //objdalVehicleInformation.Insert_Registration_info(option, vid, RegNo, RegDate, LiCNo, LicenseExDate, RegTo, Address, Email, ContactNo, document, UserId);
-                if (file.ContentLength <= 31457280)//size  
-                {
-                }
+            string vid = ddlVehicleId.Text;
+            string RegNo = txtRegistration.Text;
+            string RegDate = txtDateRegistration.Text;
+            string LiCNo = txtLicenseNo.Text;
+            string LicenseExDate = txtLicExpired.Text;
+            string RegTo = txtRegisteredTo.Text;
+            string Address = txtAddress.Text;
+            string Email = txtEmail.Text;
+            string ContactNo = txtContact.Text;
+            //VarBinary RegDocFile = document;
+            //byte[] RegDocFile =document;
+            string UserId = "HR";
+            //objdalVehicleInformation.Insert_Registration_info(option, vid, RegNo, RegDate, LiCNo, LicenseExDate, RegTo, Address, Email, ContactNo, document, UserId);
+            if (file.ContentLength <= 31457280)//size  
+            {
+            }
 
-                string constring = ConfigurationManager.ConnectionStrings["conStringAms"].ToString();
-                using (SqlConnection con = new SqlConnection(constring))
+            string constring = ConfigurationManager.ConnectionStrings["conStringAms"].ToString();
+            using (SqlConnection con = new SqlConnection(constring))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
 
-                {                                   
-                    con.Open();
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = con;
-
-                    string commandText = @"INSERT INTO [AMS_DB].[dbo].[Vehicle_Registration]([ChasisNo],[RegNo],[RegDate],[LiCNo],[LicenseExDate],[RegTo],[Address],[Email],[ContactNo],[RegDocFile],[uerId],[entryDate]) "
-                                         + " VALUES(@ChasisNo, @RegNo, @RegDate,@LiCNo,@LicenseExDate,@RegTo ,@Address,@Email, @ContactNo,@FileData ,@UserId,Getdate())";    
+                string commandText = @"INSERT INTO [AMS_DB].[dbo].[Vehicle_Registration]([ChasisNo],[RegNo],[RegDate],[LiCNo],[LicenseExDate],[RegTo],[Address],[Email],[ContactNo],[RegDocFile],[uerId],[entryDate]) "
+                                     + " VALUES(@ChasisNo, @RegNo, @RegDate,@LiCNo,@LicenseExDate,@RegTo ,@Address,@Email, @ContactNo,@FileData ,@UserId,Getdate())";
 
 
 
-                    //string commandText = @"INSERT INTO [AMS_DB].[dbo].[Vehicle_Registration]([VId],[RegNo],[RegDate],[LiCNo],[LicenseExDate],[RegTo],[Address],[Email],[ContactNo],[uerId],[entryDate]) "
-                    //                     + " VALUES(@vid, @RegNo, @RegDate,@LiCNo,@LicenseExDate,@RegTo ,@Address,@Email, @ContactNo ,@UserId,Getdate())";   
+                //string commandText = @"INSERT INTO [AMS_DB].[dbo].[Vehicle_Registration]([VId],[RegNo],[RegDate],[LiCNo],[LicenseExDate],[RegTo],[Address],[Email],[ContactNo],[uerId],[entryDate]) "
+                //                     + " VALUES(@vid, @RegNo, @RegDate,@LiCNo,@LicenseExDate,@RegTo ,@Address,@Email, @ContactNo ,@UserId,Getdate())";   
 
-                    cmd.CommandText = commandText;
-                    cmd.CommandType = CommandType.Text;
-                    cmd.Parameters.Add("@ChasisNo", SqlDbType.VarChar);
-                    cmd.Parameters["@ChasisNo"].Value = vid;
-                    cmd.Parameters.Add("@RegNo", SqlDbType.VarChar);
-                    cmd.Parameters["@RegNo"].Value =RegNo;
+                cmd.CommandText = commandText;
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add("@ChasisNo", SqlDbType.VarChar);
+                cmd.Parameters["@ChasisNo"].Value = vid;
+                cmd.Parameters.Add("@RegNo", SqlDbType.VarChar);
+                cmd.Parameters["@RegNo"].Value = RegNo;
 
-                    cmd.Parameters.Add("@LiCNo", SqlDbType.VarChar);
-                    cmd.Parameters["@LiCNo"].Value = LiCNo;
+                cmd.Parameters.Add("@LiCNo", SqlDbType.VarChar);
+                cmd.Parameters["@LiCNo"].Value = LiCNo;
 
-                    cmd.Parameters.Add("@RegDate", SqlDbType.VarChar);
-                    cmd.Parameters["@RegDate"].Value = RegDate;
+                cmd.Parameters.Add("@RegDate", SqlDbType.VarChar);
+                cmd.Parameters["@RegDate"].Value = RegDate;
 
-                    cmd.Parameters.Add("@LicenseExDate", SqlDbType.VarChar);
-                    cmd.Parameters["@LicenseExDate"].Value = LicenseExDate;
+                cmd.Parameters.Add("@LicenseExDate", SqlDbType.VarChar);
+                cmd.Parameters["@LicenseExDate"].Value = LicenseExDate;
 
-                    cmd.Parameters.Add("@RegTo", SqlDbType.VarChar);
-                    cmd.Parameters["@RegTo"].Value = RegTo;
+                cmd.Parameters.Add("@RegTo", SqlDbType.VarChar);
+                cmd.Parameters["@RegTo"].Value = RegTo;
 
-                    cmd.Parameters.Add("@Address", SqlDbType.VarChar);
-                    cmd.Parameters["@Address"].Value = Address;
-
-
-                    cmd.Parameters.Add("@Email", SqlDbType.VarChar);
-                    cmd.Parameters["@Email"].Value = Email;
-
-                    cmd.Parameters.Add("@ContactNo", SqlDbType.VarChar);
-                    cmd.Parameters["@ContactNo"].Value = Address;
+                cmd.Parameters.Add("@Address", SqlDbType.VarChar);
+                cmd.Parameters["@Address"].Value = Address;
 
 
+                cmd.Parameters.Add("@Email", SqlDbType.VarChar);
+                cmd.Parameters["@Email"].Value = Email;
 
-                    cmd.Parameters.Add("@FileData", SqlDbType.VarBinary);
-                    cmd.Parameters["@FileData"].Value = document;
+                cmd.Parameters.Add("@ContactNo", SqlDbType.VarChar);
+                cmd.Parameters["@ContactNo"].Value = Address;
 
-                    cmd.Parameters.Add("@UserId", SqlDbType.VarChar);
-                    cmd.Parameters["@UserId"].Value = UserId;
-                    cmd.ExecuteNonQuery();
-                    cmd.Dispose();
-                    con.Close();
-                   
-                }
+
+
+                cmd.Parameters.Add("@FileData", SqlDbType.VarBinary);
+                cmd.Parameters["@FileData"].Value = document;
+
+                cmd.Parameters.Add("@UserId", SqlDbType.VarChar);
+                cmd.Parameters["@UserId"].Value = UserId;
+                cmd.ExecuteNonQuery();
+                cmd.Dispose();
+                con.Close();
+
+            }
 
         }
+
+
+        // functional method for vehicles insurance information....
+
+        private void BindInsuranceCompany()
+        {
+
+            dt = objdalVehicleInformation.InsuranceCompany();
+            ddlCompanyName.DataSource = dt;
+            ddlCompanyName.DataBind();
+            ddlCompanyName.DataTextField = "CompanyName";
+            ddlCompanyName.DataValueField = "CompanyName";
+            ddlCompanyName.DataBind();
+        }
+
+        private void BindBranchname()
+        {
+
+            dt = objdalVehicleInformation.InsuranceBranchName();
+            ddlBranchName.DataSource = dt;
+            ddlBranchName.DataBind();
+            ddlBranchName.DataTextField = "BranchName";
+            ddlBranchName.DataValueField = "BranchName";
+            ddlBranchName.DataBind();
+        }
+
+
+        private void BindVehiclesRegNo()
+        {
+
+            dt = objdalVehicleInformation.GetVehicleRegistrationNumber();
+            ddlRegNO.DataSource = dt;
+            ddlRegNO.DataBind();
+            ddlRegNO.DataTextField = "RegNo";
+            ddlRegNO.DataValueField = "RegNo";
+            ddlRegNO.DataBind();
+        }
+
+
+        private void BindMaxInsuranceCode()
+        {
+            dt = objdalVehicleInformation.GetMaxVehiclesInsuranceCode();
+            objCommonClass.myfBindMaxValueInFourDigit(txtCode, dt);
+        }
+        private void InsertvehiclesInsurance()
+        {
+            string code = txtCode.Text;
+            string vehiclesRegNo = ddlRegNO.Text;
+            string companyName = ddlCompanyName.Text;
+            string branchName = ddlBranchName.Text;
+            string policyNumber = txtPolicyNumber.Text;
+            string effectiveDate = txtEffectiveDate.Text;
+            string expireDate = txtExpDate.Text;
+            string grapicalArea = txtGraphicalarea.Text;
+            string issuDate = txtIssueDate.Text;
+            string mrNo = txtmrNo.Text;
+            string notes = txtNote.Text;
+            objdalVehicleInformation.InsertVehiclesInsuranceInformation(option, code, vehiclesRegNo, companyName, branchName, policyNumber, effectiveDate, expireDate, grapicalArea, issuDate, mrNo, notes, "Nasir");
+        }
+
+        protected void btnInsuranceSave_Click(object sender, EventArgs e)
+        {
+            option = 1;
+            InsertvehiclesInsurance();
+            BindMaxInsuranceCode();
+            RefreshINsuranceForm();
+            string message = "Data have been saved successfully.";
+            string script = "window.onload = function(){ alert('";
+            script += message;
+            script += "')};";
+            ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
+        }
+
+
+        private void RefreshINsuranceForm()
+        {
+
+            txtCode.Text = "";
+            //ddlCompanyName.Text="";
+            // ddlBranchName.Text="";
+            //ddlRegNO.Text="";
+            txtPolicyNumber.Text = "";
+            txtEffectiveDate.Text = "";
+            txtGraphicalarea.Text = "";
+            txtExpDate.Text = "";
+            txtIssueDate.Text = "";
+            txtmrNo.Text = "";
+            txtNote.Text = "";
+        }
+
     }
 }

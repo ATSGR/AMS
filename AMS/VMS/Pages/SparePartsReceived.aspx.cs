@@ -165,13 +165,6 @@ namespace AMS.VMS.Pages
 
         private void Refresh()
         {
-
-            //txtId.Text = "";
-            //ddlCategory.Items.Clear();
-            //ddlDept.Items.Clear();
-            //ddlItemName.Items.Clear();
-            //ddlVendor.Items.Clear();
-            //txtRecDate.Text = "";
             txtQuantity.Text = "";
             txtTotalPrice.Text = "";
             txtWarrenty.Text = "";
@@ -180,42 +173,10 @@ namespace AMS.VMS.Pages
             BindMax();
         }
 
-        //protected void grdSparepartsReceived_PageIndexChanging(object sender, GridViewPageEventArgs e)
-        //{
-        //    grdSparepartsReceived.PageIndex = e.NewPageIndex;
-        //}
-
         protected void grdSparepartsReceived_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
-        //private void BindReceivedPartsGrid()
-        //{
-        //    grdSparepartsReceived.DataSource=objdalSparepartsReceived.GetAllSparepartsReceived(option, "");
-        //    grdSparepartsReceived.DataBind();
-        //}
-
-        //protected void btnlink(object sender, EventArgs e)
-        //{
-        //    int i=0;
-        //    GridViewRow grdrow=(GridViewRow)(sender as Control).Parent.Parent;
-        //    int RowIndex = grdrow.RowIndex;
-        //    txtId.Text=grdSparepartsReceived.Rows[RowIndex].Cells[0].Text;
-        //    ddlDept.Text=grdSparepartsReceived.Rows[RowIndex].Cells[1].Text;
-        //    ddlCategory.Text=grdSparepartsReceived.Rows[RowIndex].Cells[2].Text;
-        //    ddlItemName.Text=grdSparepartsReceived.Rows[RowIndex].Cells[3].Text;
-        //    ddlVendor.Text=grdSparepartsReceived.Rows[RowIndex].Cells[4].Text;
-        //    txtRecDate.Text=grdSparepartsReceived.Rows[RowIndex].Cells[5].Text;
-        //    txtWarrenty.Text=grdSparepartsReceived.Rows[RowIndex].Cells[6].Text;
-        //    txtWarrentEndDate.Text=grdSparepartsReceived.Rows[RowIndex].Cells[7].Text;
-        //    txtUnitPrice.Text=grdSparepartsReceived.Rows[RowIndex].Cells[8].Text;
-        //    txtQuantity.Text=grdSparepartsReceived.Rows[RowIndex].Cells[9].Text;
-        //    txtTotalPrice.Text=grdSparepartsReceived.Rows[RowIndex].Cells[10].Text;
-        //    btnSave.Enabled=false;
-        //    btnEdit.Enabled=true;
-
-        //}
 
         protected void btnEdit_Click(object sender, EventArgs e)
         {
@@ -246,22 +207,3 @@ namespace AMS.VMS.Pages
     }
 
 }
-
-
-
-
-
-
-
-
-//private void AccessAfterincidentInformation()
-//        {
-//            string AfterincidentId = txtId.Text;
-//            string IncidentId = ddlIncident.Text;
-//            string RepairStatus = txtRepstatus.Text;
-//            string Compensation = txtCompensation.Text;
-//            string Cost = txtcost.Text;
-//            objdalAftterIncident.Insert_After_Incident(option, AfterincidentId, IncidentId, RepairStatus, Compensation, Cost, "MIS");
-//        }ddlIncident.Items.Clear();
-
-//GetAllAfterIncident(option, "");

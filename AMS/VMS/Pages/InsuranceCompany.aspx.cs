@@ -31,8 +31,8 @@ namespace AMS.VMS.Pages
                 {
                     option = 1;
                     BindInsuranceCompanyTogrid();
-                   
-                    
+
+
                 }
             }
             else
@@ -42,7 +42,7 @@ namespace AMS.VMS.Pages
             //binding for max value...
             BindMaxCode();
             //BindInsuranceCompanyTogrid();
-            btnUpdate.Visible = false;         
+            btnUpdate.Visible = false;
         }
 
         private void BindMaxCode()
@@ -111,7 +111,7 @@ namespace AMS.VMS.Pages
         private void BindInsuranceCompanyTogrid()
         {
 
-            grdInsuranceCompany.DataSource = objdalInsurenceCompany.GetAllInsuraceCompany(option,  "");
+            grdInsuranceCompany.DataSource = objdalInsurenceCompany.GetAllInsuraceCompany(option, "");
             grdInsuranceCompany.DataBind();
         }
 
@@ -121,7 +121,7 @@ namespace AMS.VMS.Pages
             //txtId.Text = grdVendor.Rows[RowIndex].Cells[0].Text;          
             //btnUpdate.Enabled = true;
 
-         
+
             int i = 0;
             GridViewRow grdrow = (GridViewRow)(sender as Control).Parent.Parent;
             int RowIndex = grdrow.RowIndex;
@@ -130,9 +130,9 @@ namespace AMS.VMS.Pages
             txtRemarks.Text = grdInsuranceCompany.Rows[RowIndex].Cells[2].Text;
             btnSave.Visible = false;
             btnUpdate.Visible = true;
-            
+
         }
-    #endregion
+        #endregion
 
 
         protected void btnUpdate_Click(object sender, EventArgs e)
@@ -141,13 +141,13 @@ namespace AMS.VMS.Pages
             option = 2;
             AccressCompany();
             option = 1;
-            BindInsuranceCompanyTogrid();            
+            BindInsuranceCompanyTogrid();
             string message = "Data have been Updated successfully.";
             string script = "window.onload = function(){ alert('";
             script += message;
             script += "')};";
             ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
 
-        }  
+        }
     }
 }
