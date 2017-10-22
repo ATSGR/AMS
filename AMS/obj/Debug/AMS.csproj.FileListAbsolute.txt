@@ -335,7 +335,6 @@ C:\Users\MIS7\Downloads\AMS-master\AMS\AMS\bin\Newtonsoft.Json.xml
 C:\Users\MIS7\Downloads\AMS-master\AMS\AMS\obj\Debug\AMS.csprojResolveAssemblyReference.cache
 C:\Users\MIS7\Downloads\AMS-master\AMS\AMS\obj\Debug\AMS.dll
 C:\Users\MIS7\Downloads\AMS-master\AMS\AMS\obj\Debug\AMS.pdb
-<<<<<<< HEAD
 D:\Office project final\AMS\AMS\bin\VMS\Reports\rptVehicleScheduleManual.rpt
 D:\Office project final\AMS\AMS\bin\VMS\Reports\rptVehicleScheduleManual.cs
 D:\Office project final\AMS\AMS\bin\AMS.dll.config
@@ -347,9 +346,15 @@ D:\Office project final\AMS\AMS\bin\Newtonsoft.Json.dll
 D:\Office project final\AMS\AMS\bin\Newtonsoft.Json.xml
 D:\Office project final\AMS\AMS\obj\Debug\AMS.dll
 D:\Office project final\AMS\AMS\obj\Debug\AMS.pdb
-=======
-D:\VMS Projects\AMS\AMS\bin\AjaxControlToolkit.dll
-D:\VMS Projects\AMS\AMS\bin\Microsoft.QualityTools.Testing.Fakes.dll
-D:\VMS Projects\AMS\AMS\bin\Newtonsoft.Json.dll
-D:\VMS Projects\AMS\AMS\bin\Newtonsoft.Json.xml
->>>>>>> 54ce17a0826d8e93401d842342a18e9ba8d91377
+F:\AMS-9aebb904957768998c3570e2f84cb8bee5fe29ad\AMS\bin\VMS\Reports\rptVehicleScheduleManual.rpt
+F:\AMS-9aebb904957768998c3570e2f84cb8bee5fe29ad\AMS\bin\VMS\Reports\rptVehicleScheduleManual.cs
+F:\AMS-9aebb904957768998c3570e2f84cb8bee5fe29ad\AMS\bin\AMS.dll.config
+F:\AMS-9aebb904957768998c3570e2f84cb8bee5fe29ad\AMS\bin\AMS.dll
+F:\AMS-9aebb904957768998c3570e2f84cb8bee5fe29ad\AMS\bin\AMS.pdb
+F:\AMS-9aebb904957768998c3570e2f84cb8bee5fe29ad\AMS\bin\AjaxControlToolkit.dll
+F:\AMS-9aebb904957768998c3570e2f84cb8bee5fe29ad\AMS\bin\Microsoft.QualityTools.Testing.Fakes.dll
+F:\AMS-9aebb904957768998c3570e2f84cb8bee5fe29ad\AMS\bin\Newtonsoft.Json.dll
+F:\AMS-9aebb904957768998c3570e2f84cb8bee5fe29ad\AMS\bin\Newtonsoft.Json.xml
+F:\AMS-9aebb904957768998c3570e2f84cb8bee5fe29ad\AMS\obj\Debug\AMS.csprojResolveAssemblyReference.cache
+F:\AMS-9aebb904957768998c3570e2f84cb8bee5fe29ad\AMS\obj\Debug\AMS.dll
+F:\AMS-9aebb904957768998c3570e2f84cb8bee5fe29ad\AMS\obj\Debug\AMS.pdb
