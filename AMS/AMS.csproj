@@ -1523,6 +1523,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\dalInsurenceCompany.cs" />
+    <Compile Include="DAL\dalTaxInformation.cs" />
     <Compile Include="DAL\dalvehiclesFitnessInformation.cs" />
     <Compile Include="DAL\DalVehiclesInsurance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

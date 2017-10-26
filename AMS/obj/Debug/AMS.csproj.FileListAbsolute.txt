@@ -369,4 +369,3 @@ D:\Vehicles MGMT Github\AMS\AMS\bin\Newtonsoft.Json.dll
 D:\Vehicles MGMT Github\AMS\AMS\bin\Newtonsoft.Json.xml
 D:\Vehicles MGMT Github\AMS\AMS\obj\Debug\AMS.dll
 D:\Vehicles MGMT Github\AMS\AMS\obj\Debug\AMS.pdb
-D:\Vehicles MGMT Github\AMS\AMS\obj\Debug\AMS.csprojResolveAssemblyReference.cache
