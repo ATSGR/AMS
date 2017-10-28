@@ -73,7 +73,7 @@
                  <asp:GridView ID="grdBranchInfo" runat="server" PageSize="5" Width="1072px" AllowPaging="True" CssClass="table table-hover table-bordered table-responsive"
                      AutoGenerateColumns="False" OnPageIndexChanging="grdBranchInfo_PageIndexChanging" OnSelectedIndexChanged="grdBranchInfo_SelectedIndexChanged">
                         <Columns>
-                            <asp:BoundField HeaderText="Company Name" DataField="Companyname"></asp:BoundField>
+                            <asp:BoundField HeaderText="Company Name"  DataField="Companyname"></asp:BoundField>
                             <asp:BoundField HeaderText="Brnach Name" DataField="Branch"></asp:BoundField>
                             <asp:BoundField HeaderText="Code" DataField="Code"></asp:BoundField>
                              <asp:BoundField HeaderText="Phone" DataField="Phone"></asp:BoundField>

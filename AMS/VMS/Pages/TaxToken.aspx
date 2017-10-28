@@ -198,7 +198,7 @@
                     </div>
 
                     <div class="form-group">
-                        <div class="col-sm-6 col-md-offset-10">
+                        <div class="col-sm-6 col-md-offset-8">
                             <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-group-lg btn-primary" OnClick="btnSave_Click"  />
                             <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn btn-group-lg  btn-success"  />
 
